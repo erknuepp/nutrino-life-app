@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    res
-        .status(200)
-        .send('Maybe your life is about to change?')
+    res.status(200)
+        .render('index')
         .end();
 });
 
